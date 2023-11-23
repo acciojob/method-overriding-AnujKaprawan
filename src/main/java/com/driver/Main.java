@@ -1,16 +1,13 @@
 package com.driver;
+import java.util.Scanner;
 
-
-// Task 1: Create a class A with a method named meth
 class A {
     public String meth() {
         return "Invoking method from class A";
     }
 }
 
-// Task 2: Create a class B which extends class A
 class B extends A {
-    // Task 4: Override meth of class A in class B
     @Override
     public String meth() {
         return "Method is overridden in Extended class B";
@@ -19,9 +16,17 @@ class B extends A {
 
 public class Main {
     public static void main(String[] args) {
-        // Task 3: Create an object of class B and call method meth of class A with it
-        B obj = new B();
-        // Task 5: Call the overridden method from obj of class B
-        System.out.println(obj.meth());
+        Scanner scanner = new Scanner(System.in);
+        B objB = new B();
+
+        // Task 3: Call method meth of class A with an object of class B
+        String resultFromA = objB.meth(); // This will call the overridden method in class B
+        System.out.println("Result from class A's method: " + resultFromA);
+
+        // Task 5: Call the overridden method from an object of class B
+        String overriddenResult = objB.meth();
+        System.out.println("Overridden method result from class B: " + overriddenResult);
+
+        scanner.close();
     }
 }
