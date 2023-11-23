@@ -1,5 +1,4 @@
 package com.driver;
-import java.util.Scanner;
 
 public class Main {
     public static class A {
@@ -13,8 +12,7 @@ public class Main {
         return "Method is overridden in Extended class B";
     }
 }
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main( ) {
         B objB = new B();
          obj.meth();
     }
